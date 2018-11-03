@@ -75,7 +75,7 @@ function displayBranches() {
     branches.map(
       branch=>
       '<li>'+
-
+        branch.name +
       '</li>'
     ).join('')
   }</ul>`
