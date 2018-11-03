@@ -72,11 +72,12 @@ function getBranches(elements) {
 
 function displayBranches() {
   const branches = JSON.parse(this.responseText)
+  console.log(branches)
   const branchesList = `<ul>${
     branches.map(
       branch=>
       '<li>'+
-        
+
       '</li>'
     ).join('')
   }</ul>`
