@@ -56,7 +56,7 @@ function displayCommits() {
     document.getElementById('details').innerHTML = commitsList
 }
 
-function getBranches(elements) {
+function getBranches(element) {
   const repository = element.dataset.repository
   const username = element.dataset.username
   const full_name = `${username}/${repository}`
