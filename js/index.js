@@ -45,7 +45,6 @@ function getCommits(element) {
 
 function displayCommits() {
   const commits = JSON.parse(this.responseText)
-  console.log(commits[0].author)
   const commitsList = `<ul>${commits
     .map(
       commit =>
@@ -72,5 +71,13 @@ function getBranches(elements) {
 }
 
 function displayBranches() {
-  const branches = 
+  const branches = JSON.parse(this.responseText)
+  const branchesList = `<ul>${
+    branches.map(
+      branch=>
+      '<li>'+
+        
+      '</li>'
+    ).join('')
+  }</ul>`
 }
