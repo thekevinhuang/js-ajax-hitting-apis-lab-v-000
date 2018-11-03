@@ -38,7 +38,6 @@ function getCommits(element) {
   const full_name = `${username}/${repository}`
 
   const req = new XMLHttpRequest()
-  console.log(full_name)
   req.addEventListener('load',displayCommits)
   req.open('GET', `https://api.github.com/repos/${full_name}/commits`)
   req.send()
@@ -60,8 +59,16 @@ function displayCommits() {
     document.getElementById('details').innerHTML += commitsList
 }
 
-function getBranches() {
+function getBranches(elements) {
+  const repository = element.dataset.repository
+  const username = element.dataset.username
+  const full_name = `${username}/${repository}`
 
+  const req = new XMLHttpRequest()
+
+  req.addEventListener('load',displayBranches)
+  req.open('GET', `https://api.github.com/repos/${full_name}/branches`)
+  
 }
 
 function displayBranches() {
